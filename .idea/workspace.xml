@@ -25,10 +25,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5117b367-394d-48f7-aef3-4387f5d4c3ec" name="Default Changelist" comment="auth forms and views">
+    <list default="true" id="5117b367-394d-48f7-aef3-4387f5d4c3ec" name="Default Changelist" comment="registered auth blueprint">
       <change beforePath="$PROJECT_DIR$/../Group6Flask/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Group6Flask/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Group6Flask/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Group6Flask/app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Group6Flask/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Group6Flask/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Group6Flask/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Group6Flask/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Group6Flask" />
   </component>
   <component name="ProjectId" id="1iRBRHT8xra1Gsm1n0tO09UrONm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -96,7 +99,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601862776457</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="extended base in index.html">
+      <created>1601863045204</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601863045204</updated>
+    </task>
+    <task id="LOCAL-00005" summary="registered auth blueprint">
+      <created>1601863190200</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601863190200</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,7 +132,9 @@
     <MESSAGE value="templates, blueprints, configuration" />
     <MESSAGE value="login template and register template" />
     <MESSAGE value="auth forms and views" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth forms and views" />
+    <MESSAGE value="extended base in index.html" />
+    <MESSAGE value="registered auth blueprint" />
+    <option name="LAST_COMMIT_MESSAGE" value="registered auth blueprint" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1601860797990">
