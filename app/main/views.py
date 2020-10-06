@@ -1,9 +1,9 @@
 from flask import render_template,request,redirect,url_for,abort
 from flask_login import login_required
 
-from ..models import User
+from ..models import User, Blogpost
 from . import main
-from .forms import UpdateProfile
+from .forms import UpdateProfile, ContactForm, PostForm
 from .. import db, photos
 import cloudinary
 import cloudinary.uploader
@@ -14,7 +14,8 @@ from cloudinary.utils import cloudinary_url
 @main.route('/', methods = ['GET','POST'])
 def index():
     title = 'Welcome to Blogging App'
-    return render_template('main/index.html', title=title)
+    blogs = Blogpost.query.all()
+    return render_template('main/index.html', title=title, blogs=blogs)
 
 @main.route('/about', methods = ['GET'])
 def about():
@@ -23,13 +24,19 @@ def about():
 
 @main.route('/post', methods = ['GET','POST'])
 def post():
+    form = PostForm()
+    if form.validate_on_submit():
+        blogpost = Blogpost(title=form.title.data, subtitle=form.subtitle.data, author=form.author.data, content=form.content.data)
+        db.session.add(blogpost)
+        db.session.commit()
     title = 'Post a Blog'
-    return render_template('main/post.html', title=title)
+    return render_template('main/post.html', title=title, form=form)
 
 @main.route('/contact', methods = ['GET'])
 def contact():
     title = 'Contact Us'
-    return render_template('main/contact.html', title=title)
+    form = ContactForm()
+    return render_template('main/contact.html', title=title, form=form)
 
 
 @main.route('/user/<uname>', methods = ['GET','POST'])
