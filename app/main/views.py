@@ -17,17 +17,17 @@ def index():
     return render_template('main/index.html', title=title)
 
 @main.route('/about', methods = ['GET'])
-def index():
+def about():
     title = 'About Us'
     return render_template('main/about.html', title=title)
 
 @main.route('/post', methods = ['GET','POST'])
-def index():
+def post():
     title = 'Post a Blog'
     return render_template('main/post.html', title=title)
 
 @main.route('/contact', methods = ['GET'])
-def index():
+def contact():
     title = 'Contact Us'
     return render_template('main/contact.html', title=title)
 

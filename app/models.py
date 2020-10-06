@@ -44,3 +44,14 @@ class Role(db.Model):
 
     def __repr__(self):
         return f'User {self.name}'
+
+class Blogpost(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50))
+    subtitle = db.Column(db.String(50))
+    author = db.Column(db.String(20))
+    date_posted = db.Column(db.DateTime)
+    content = db.Column(db.Text)
+
+    def __repr__(self):
+        return f'User {self.title}'

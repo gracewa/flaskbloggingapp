@@ -2,7 +2,6 @@ from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_mail import Mail
-from flask_simplemde import SimpleMDE
 from flask_sqlalchemy import SQLAlchemy
 from app.config import DevConfig
 from flask_uploads import UploadSet, IMAGES
@@ -18,7 +17,6 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 mail = Mail()
 photos = UploadSet('photos',IMAGES)
-simple = SimpleMDE()
 
 
 app = Flask(__name__, instance_relative_config=True)
@@ -32,7 +30,6 @@ bootstrap.init_app(app)
 db.init_app(app)
 login_manager.init_app(app)
 mail.init_app(app)
-simple.init_app(app)
 
 
 # Registering the blueprint
@@ -42,7 +39,7 @@ app.register_blueprint(main_blueprint)
 from .auth import auth as auth_blueprint
 app.register_blueprint(auth_blueprint,url_prefix = '/authenticate')
 
-from app import views
+from app.main import views
 
 
 if __name__ == '__main__':

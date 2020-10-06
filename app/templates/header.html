@@ -1,0 +1,30 @@
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='egypt.jpg') }}')">
+    <div class="navigation">
+        <div class="navbar navbar-default" role="navigation">
+
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                {% if current_user.is_authenticated %}
+                <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+                <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                {% else %}
+                <li><a href="{{url_for('auth.login')}}">Profile</a></li>
+                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                {%endif%}
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1 style="color:white; margin-bottom:100px; margin-top:100px; text-align:center;">Welcome to
+                        Blogging App</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
