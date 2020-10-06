@@ -1,9 +1,9 @@
 from flask import render_template,request,redirect,url_for,abort
 from flask_login import login_required
 
-from ..models import User, Blogpost
+from ..models import User, Blogpost, Comment
 from . import main
-from .forms import UpdateProfile, ContactForm, PostForm
+from .forms import UpdateProfile, ContactForm, PostForm,CommentForm
 from .. import db, photos
 import cloudinary
 import cloudinary.uploader
@@ -23,14 +23,45 @@ def about():
     return render_template('main/about.html', title=title)
 
 @main.route('/post', methods = ['GET','POST'])
+@login_required
 def post():
     form = PostForm()
     if form.validate_on_submit():
         blogpost = Blogpost(title=form.title.data, subtitle=form.subtitle.data, author=form.author.data, content=form.content.data)
         db.session.add(blogpost)
         db.session.commit()
+        return redirect(url_for('main.index'))
     title = 'Post a Blog'
     return render_template('main/post.html', title=title, form=form)
+
+@main.route('/post/<int:blog_id>')
+def view_post(blog_id):
+
+    '''
+    View blogpost page function that returns the post details page and its data
+    '''
+    posts = Blogpost.query.filter_by(id = blog_id)
+    comments = Comment.query.filter_by(blog_id = blog_id)
+
+    return render_template('main/viewpost.html',posts=posts,comments = comments)
+
+@main.route('/post/<int:blog_id>/comment', methods = ['GET','POST'])
+@login_required
+def new_comment(blog_id):
+    posts = Blogpost.query.filter_by(id=blog_id)
+    post = posts[0]
+    form = CommentForm()
+    if form.validate_on_submit():
+
+        comment = Comment(comment_title = form.title.data, comment = form.comment.data, blog_id = blog_id )
+
+        db.session.add(comment)
+        db.session.commit()
+
+        return redirect(url_for('main.view_post',blog_id = post.id ))
+
+    return render_template('main/comment.html', form=form, posts=posts)
+
 
 @main.route('/contact', methods = ['GET'])
 def contact():

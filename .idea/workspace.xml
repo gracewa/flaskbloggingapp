@@ -19,22 +19,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5117b367-394d-48f7-aef3-4387f5d4c3ec" name="Default Changelist" comment="Added header">
+    <list default="true" id="5117b367-394d-48f7-aef3-4387f5d4c3ec" name="Default Changelist" comment="Added form to post blogs &amp; template to view past blogs">
+      <change afterPath="$PROJECT_DIR$/../watchlist2/.idea/watchlist2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bloggingapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bloggingapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/main/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/main/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/main/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/templates/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/templates/profile/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchlist2/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../watchlist2/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchlist2/app/templates/profile/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/../watchlist2/app/templates/profile/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchlist2/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../watchlist2/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../watchlist2/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../watchlist2/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../watchlist2" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -255,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601954142259</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added form to post blogs &amp; template to view past blogs">
+      <created>1601958522443</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601958522443</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,16 +291,21 @@
     <MESSAGE value="run.py" />
     <MESSAGE value="Added about, post and contact routes in main" />
     <MESSAGE value="Added header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added header" />
+    <MESSAGE value="Added form to post blogs &amp; template to view past blogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added form to post blogs &amp; template to view past blogs" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1601860797990">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1601958895314">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601860797990" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1601950614219">
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601958895314" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1601967137130">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601950614219" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601967137130" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1601960711905">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1601960711905" />
   </component>
 </project>

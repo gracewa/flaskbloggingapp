@@ -20,3 +20,9 @@ class ContactForm(FlaskForm):
     email = StringField('Your Email Address',validators=[Required(),Email()])
     message = StringField('Your Message',validators =[Required()])
     submit = SubmitField('Send')
+
+class CommentForm(FlaskForm):
+
+    title = StringField('Comment title',validators=[Required()])
+    comment = TextAreaField('Comment', validators=[Required()])
+    submit = SubmitField('Submit')

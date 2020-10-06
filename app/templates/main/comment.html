@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
+
+
+{% block content %}
+<div class="container">
+{% for blog in posts %}
+    <div class="col-md-8 offset-md-2">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <h3>{{blog.title}}</h3>
+            <h5>{{blog.subtitle}}</h5>
+            <h6>{{blog.author}}</h6>
+            <p>{{blog.content}}</p>
+
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+<div class="container">
+<div class="col-md-8 offset-md-2">
+{{wtf.quick_form(form)}}
+</div>
+</div>
+{% endblock %}

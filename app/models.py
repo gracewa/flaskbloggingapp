@@ -46,13 +46,36 @@ class Role(db.Model):
         return f'User {self.name}'
 
 class Blogpost(db.Model):
+    __tablename__ = 'blogs'
+
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50))
     subtitle = db.Column(db.String(50))
     author = db.Column(db.String(20))
-    date_posted = db.Column(db.DateTime)
+    date_posted = db.Column(db.Time,default=datetime.utcnow())
     content = db.Column(db.Text)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def __repr__(self):
         return f'User {self.title}'
+
+class Comment(db.Model):
+
+    __tablename__ = 'comments'
+    id = db.Column(db.Integer,primary_key = True)
+    comment_title = db.Column(db.String)
+    comment = db.Column(db.String)
+    posted = db.Column(db.Time,default=datetime.utcnow())
+    blog_id = db.Column(db.Integer, db.ForeignKey('blogs.id'))
+
+
+
+
+    def save_review(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_comments(cls, id):
+        comments = Comment.query.filter_by(blog_id=id).all()
+        return comments
