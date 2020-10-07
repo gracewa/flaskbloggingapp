@@ -3,7 +3,7 @@ from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
-from app.config import DevConfig
+from app.config import DevConfig, ProdConfig
 from flask_uploads import UploadSet, IMAGES
 
 #from config import config_options
@@ -23,7 +23,7 @@ app = Flask(__name__, instance_relative_config=True)
 
 
 # Setting up configuration
-app.config.from_object(DevConfig)
+app.config.from_object(ProdConfig)
 
 # Initializing flask extensions
 bootstrap.init_app(app)
