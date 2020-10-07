@@ -1,6 +1,5 @@
-from flask import render_template,request,redirect,url_for,abort
-from flask_login import login_required
-
+from flask import render_template,request,redirect,url_for,abort, flash
+from flask_login import login_required, current_user
 from ..models import User, Blogpost, Comment
 from . import main
 from .forms import UpdateProfile, ContactForm, PostForm,CommentForm
@@ -53,7 +52,7 @@ def new_comment(blog_id):
     form = CommentForm()
     if form.validate_on_submit():
 
-        comment = Comment(comment_title = form.title.data, comment = form.comment.data, blog_id = blog_id )
+        comment = Comment(comment_title = form.title.data, comment = form.comment.data, comment_author = form.name.data, blog_id = blog_id, username = current_user)
 
         db.session.add(comment)
         db.session.commit()
@@ -61,6 +60,18 @@ def new_comment(blog_id):
         return redirect(url_for('main.view_post',blog_id = post.id ))
 
     return render_template('main/comment.html', form=form, posts=posts)
+
+@main.route('/post/<int:blog_id>/comment/<int:comment_id>/delete', methods = ['GET','POST'])
+@login_required
+def delete_comment(blog_id, comment_id):
+    comment = Comment.query.filter_by(blog_id = blog_id, id=comment_id).first()
+    if comment.username != current_user:
+        db.session.delete(comment)
+        db.session.commit()
+        flash('Your comment has been deleted!', 'success')
+    else:
+        flash('You cannot delete that comment', 'success')
+    return redirect(url_for('main.view_post', blog_id=blog_id))
 
 
 @main.route('/contact', methods = ['GET'])

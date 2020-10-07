@@ -22,7 +22,6 @@ class ContactForm(FlaskForm):
     submit = SubmitField('Send')
 
 class CommentForm(FlaskForm):
-
-    title = StringField('Comment title',validators=[Required()])
+    title = StringField('Comment Title',validators=[Required()])
     comment = TextAreaField('Comment', validators=[Required()])
     submit = SubmitField('Submit')

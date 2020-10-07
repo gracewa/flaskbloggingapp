@@ -19,16 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5117b367-394d-48f7-aef3-4387f5d4c3ec" name="Default Changelist" comment="Added form to post blogs &amp; template to view past blogs">
+    <list default="true" id="5117b367-394d-48f7-aef3-4387f5d4c3ec" name="Default Changelist" comment="Added comment feature">
+      <change afterPath="$PROJECT_DIR$/migrations/versions/410510f88bca_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/versions/7ccc783a7c7f_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/versions/d03b3664b087_.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../watchlist2/.idea/watchlist2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bloggingapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bloggingapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/main/viewpost.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main/viewpost.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/templates/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/templates/profile/profile.html" afterDir="false" />
@@ -265,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601958522443</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added comment feature">
+      <created>1601976318264</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1601976318264</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,7 +298,8 @@
     <MESSAGE value="Added about, post and contact routes in main" />
     <MESSAGE value="Added header" />
     <MESSAGE value="Added form to post blogs &amp; template to view past blogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added form to post blogs &amp; template to view past blogs" />
+    <MESSAGE value="Added comment feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comment feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1601958895314">

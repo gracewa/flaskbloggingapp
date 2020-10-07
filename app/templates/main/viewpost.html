@@ -15,10 +15,11 @@
             <h5>{{blog.subtitle}}</h5>
             <h6>{{blog.author}}</h6>
             <p>{{blog.content}}</p>
+            <a href="/post/{{blog.id}}/comment" ><button type="submit" class="btn btn-primary">Leave Comment</button></a>
 
         </div>
     </div>
-{% endfor %}
+
 
 
 {% if comments is defined %}
@@ -28,9 +29,11 @@
     {% for comment in comments %}
         <h3>{{comment.comment_title}}</h3>
         <p>{{comment.comment}}</p>
+        <a href="/post/{{blog.id}}/comment/{{comment.id}}/delete"><button type="submit" class="btn btn-danger">Delete Comment</button></a>
     {% endfor %}
     </div>
     </div>
 {% else %}
 {% endif %}
+{% endfor %}
 {% endblock %}
