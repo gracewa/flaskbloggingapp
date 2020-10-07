@@ -1,6 +1,7 @@
 from flask import render_template,request,redirect,url_for,abort, flash
 from flask_login import login_required, current_user
-from ..models import User, Blogpost, Comment
+from flask_user import roles_required
+from ..models import User, Blogpost, Comment, Role
 from . import main
 from .forms import UpdateProfile, ContactForm, PostForm,CommentForm
 from .. import db, photos
