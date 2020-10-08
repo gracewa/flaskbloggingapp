@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bloggingapp.iml" filepath="$PROJECT_DIR$/.idea/bloggingapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hello-django/.idea/hello-django.iml" filepath="$PROJECT_DIR$/../hello-django/.idea/hello-django.iml" />
       <module fileurl="file://$PROJECT_DIR$/../minutepitch/.idea/minutepitch.iml" filepath="$PROJECT_DIR$/../minutepitch/.idea/minutepitch.iml" />
       <module fileurl="file://$PROJECT_DIR$/../watchlist2/.idea/watchlist2.iml" filepath="$PROJECT_DIR$/../watchlist2/.idea/watchlist2.iml" />
     </modules>

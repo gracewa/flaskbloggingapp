@@ -2,7 +2,9 @@ from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
 from . import login_manager
-from datetime import datetime
+import datetime
+from marshmallow import fields, Schema
+
 
 class User(UserMixin,db.Model):
     __tablename__ = 'users'
@@ -15,6 +17,7 @@ class User(UserMixin,db.Model):
     password_secure = db.Column(db.String(255))
     pass_secure = db.Column(db.String(255))
     password_hash = db.Column(db.String(255))
+    blogposts = db.relationship('Blogpost', backref='users', lazy=True)
 
     @login_manager.user_loader
     def load_user(user_id):
@@ -52,12 +55,52 @@ class Blogpost(db.Model):
     title = db.Column(db.String(50))
     subtitle = db.Column(db.String(50))
     author = db.Column(db.String(20))
-    date_posted = db.Column(db.Time,default=datetime.utcnow())
     content = db.Column(db.Text)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    date_posted = db.Column(db.DateTime)
+
+    def __init__(self, data):
+        self.title = data.get('title')
+        self.subtitle = data.get('subtitle')
+        self.author = data.get('author')
+        self.content = data.get('content')
+        self.user_id = data.get('user_id')
+        self.date_posted = datetime.datetime.utcnow()
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self, data):
+        for key, item in data.items():
+            setattr(self, key, item)
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    @staticmethod
+    def get_all_blogposts():
+        return Blogpost.query.all()
+
+    @staticmethod
+    def get_one_blogpost(id):
+        return Blogpost.query.get(id)
 
     def __repr__(self):
-        return f'User {self.title}'
+        return '<id {}>'.format(self.id)
+class BlogpostSchema(Schema):
+  """
+  Blogpost Schema
+  """
+  id = fields.Int(dump_only=True)
+  title = fields.Str(required=True)
+  subtitle = fields.Str(required=True)
+  author = fields.Str(required=True)
+  contents = fields.Str(required=True)
+  user_id = fields.Int(required=True)
+  date_posted = fields.DateTime(dump_only=True)
 
 class Comment(db.Model):
 
@@ -65,13 +108,11 @@ class Comment(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     comment_title = db.Column(db.String)
     comment = db.Column(db.String)
-    posted = db.Column(db.Time,default=datetime.utcnow())
+    posted = db.Column(db.Time,default=datetime.datetime.utcnow())
     blog_id = db.Column(db.Integer, db.ForeignKey('blogs.id'))
 
 
-
-
-    def save_review(self):
+    def save_comment(self):
         db.session.add(self)
         db.session.commit()
 

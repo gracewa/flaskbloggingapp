@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="minutepitch" />
     <orderEntry type="module" module-name="watchlist2" />
+    <orderEntry type="module" module-name="hello-django" />
   </component>
 </module>

@@ -22,7 +22,7 @@ class ProdConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
 
 class DevConfig(Config):
     '''
@@ -34,3 +34,8 @@ class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:g11111111@localhost/blogging'
 
     DEBUG = True
+
+config_options = {
+    'development': DevConfig,
+    'production': ProdConfig,
+}

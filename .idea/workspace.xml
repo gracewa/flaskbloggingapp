@@ -19,10 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5117b367-394d-48f7-aef3-4387f5d4c3ec" name="Default Changelist" comment="Deploying">
+    <list default="true" id="5117b367-394d-48f7-aef3-4387f5d4c3ec" name="Default Changelist" comment="Added gunicorn">
+      <change afterPath="$PROJECT_DIR$/migrations/versions/5eb72a27f75d_.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../watchlist2/.idea/watchlist2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bloggingapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bloggingapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minutepitch/app/templates/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../minutepitch/app/templates/profile/profile.html" afterDir="false" />
@@ -288,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602048781964</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added gunicorn">
+      <created>1602049568014</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1602049568014</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,21 +334,22 @@
     <MESSAGE value="Added comment feature" />
     <MESSAGE value="Added delete comment function" />
     <MESSAGE value="Deploying" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploying" />
+    <MESSAGE value="Added gunicorn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added gunicorn" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1601958895314">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601958895314" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1602048339290">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1602137334178">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602048339290" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1602049167166">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602137334178" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1602051151647">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602049167166" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602051151647" />
     <state x="305" y="202" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602047603941">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
