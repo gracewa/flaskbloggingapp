@@ -10,11 +10,13 @@ import cloudinary.uploader
 from cloudinary.uploader import upload
 import cloudinary.api
 from cloudinary.utils import cloudinary_url
+from ..requests import get_blogs
+
 
 @main.route('/', methods = ['GET','POST'])
 def index():
     title = 'Welcome to Blogging App'
-    blogs = Blogpost.query.all()
+    blogs = get_blogs()
     return render_template('main/index.html', title=title, blogs=blogs)
 
 @main.route('/about', methods = ['GET'])
